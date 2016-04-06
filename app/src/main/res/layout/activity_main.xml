@@ -27,12 +27,4 @@
         android:src="@drawable/thumbsup"
         android:visibility="gone" />
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/imageView2"
-        android:layout_alignBottom="@+id/button"
-        android:layout_alignEnd="@+id/button"
-        android:src="@drawable/punch"
-        android:visibility="gone" />
 </RelativeLayout>
