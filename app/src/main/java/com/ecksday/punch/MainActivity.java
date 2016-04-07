@@ -1,13 +1,9 @@
 package com.ecksday.punch;
 
-import android.app.AlertDialog;
-import android.app.DialogFragment;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Vibrator;
-import android.preference.Preference;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -24,7 +20,7 @@ import java.security.SecureRandom;
 public class MainActivity extends AppCompatActivity {
 
     Vibrator vibrator;
-    public static int p1score=0,p2score=0,p1hs,p2hs,roundno=1,p1streak=0,p2streak=0,winner;
+    public static int p1score=0,p2score=0,p1hs,p2hs,roundno=1,p1streak=0,p2streak=0,winner, playerturn=1;
 
 
     @Override
@@ -63,9 +59,9 @@ public class MainActivity extends AppCompatActivity {
 
         final ImageButton Img = (ImageButton) findViewById(R.id.imageButton);
         final TextView ClickHere = (TextView) findViewById(R.id.textView);
-        P1Button.setText("Player 1: "+p1score);
-        P2Button.setText("Player 2: " + p2score);
-        RoundButton.setText("Round: " + roundno);
+        P1Button.setText(getResources().getString(R.string.player1)+p1score);
+        P2Button.setText(getResources().getString(R.string.player2) + p2score);
+        RoundButton.setText(getResources().getString(R.string.roundno) + roundno);
 
         final Animation fadeOut = new AlphaAnimation(1,0);
         fadeOut.setStartOffset(1000);
@@ -101,40 +97,56 @@ public class MainActivity extends AppCompatActivity {
                                        if (roundno < 10) {
                                            SecureRandom r = new SecureRandom();
                                            int i = r.nextInt(2);
-                                           if (i == 0) {
-                                               if (roundno % 2 == 1) {
+                                           if (playerturn == 1) {
+                                               if (i>0) {
                                                    p1streak++;
+                                                   p2streak = 0;
                                                    p1score += p1streak;
-                                                   P1Button.setText("Player 1: " + p1score);
-                                               } else {
-                                                   p2streak++;
-                                                   p2score += p2streak;
-                                                   P2Button.setText("Player 2: " + p2score);
+                                                   RoundButton.setText(getResources().getString(R.string.roundno) + roundno);
+                                                   Img.setImageResource(R.drawable.thumbsup);
+                                                   Img.startAnimation(fadeOut);
                                                }
-                                               Img.setImageResource(R.drawable.thumbsup);
-                                               Img.startAnimation(fadeOut);
-                                               roundno++;
-                                               RoundButton.setText("Round: " + roundno);
-                                           } else {
-                                               if (roundno % 2 == 1) {
-                                                   p1score--;
+                                               else {
                                                    p1streak = 0;
-                                                   P1Button.setText("Player 1: " + p1score);
-                                               } else {
+                                                   p1score--;
+                                                   playerturn = 2;
+                                                   roundno++;
+                                                   RoundButton.setText(getResources().getString(R.string.roundno) + roundno);
+                                                   Boolean vib_switch = settings.getBoolean("switch_vib", true);
+                                                   if (vib_switch) {
+                                                       vibrator.vibrate(1000);
+                                                   }
+                                                   Img.setImageResource(R.drawable.punch);
+                                                   Img.startAnimation(fadeOut);
+                                               }
+                                               P1Button.setText(getResources().getString(R.string.player1) + p1score);
+                                           }
+                                           else if (playerturn == 2) {
+                                               if (i>0) {
+                                                   p2streak++;
+                                                   p1streak = 0;
+                                                   p2score += p2streak;
+                                                   RoundButton.setText(getResources().getString(R.string.roundno) + roundno);
+                                                   Img.setImageResource(R.drawable.thumbsup);
+                                                   Img.startAnimation(fadeOut);
+                                               }
+                                               else {
                                                    p2streak = 0;
                                                    p2score--;
-                                                   P2Button.setText("Player 2: " + p2score);
+                                                   playerturn = 1;
+                                                   roundno++;
+                                                   RoundButton.setText(getResources().getString(R.string.roundno) + roundno);
+                                                   Boolean vib_switch = settings.getBoolean("switch_vib", true);
+                                                   if (vib_switch) {
+                                                       vibrator.vibrate(1000);
+                                                   }
+                                                   Img.setImageResource(R.drawable.punch);
+                                                   Img.startAnimation(fadeOut);
                                                }
-                                               Boolean vib_switch = settings.getBoolean("switch_vib", true);
-                                               if (vib_switch) {
-                                                   vibrator.vibrate(1000);
-                                               }
-                                               Img.setImageResource(R.drawable.punch);
-                                               Img.startAnimation(fadeOut);
-                                               roundno++;
-                                               RoundButton.setText("Round: " + roundno);
+                                               P2Button.setText(getResources().getString(R.string.player2) + p2score);
                                            }
                                        }
+
                                        else {
                                            if (p1score > p2score)
                                                winner = 1;
@@ -144,8 +156,12 @@ public class MainActivity extends AppCompatActivity {
                                                winner = 0;
                                            GameOverDialog dialog = new GameOverDialog();
                                            dialog.show(getFragmentManager(), "tag");
-
-
+                                           roundno = 1;
+                                           p1score = 0;
+                                           p2score = 0;
+                                           p1streak = 0;
+                                           p2streak = 0;
+                                           playerturn=1;
                                        }
                                    }
                                }
