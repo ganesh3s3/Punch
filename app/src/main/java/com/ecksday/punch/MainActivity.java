@@ -1,7 +1,9 @@
 package com.ecksday.punch;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Vibrator;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,6 +17,8 @@ import android.widget.TextView;
 import java.security.SecureRandom;
 
 public class MainActivity extends AppCompatActivity {
+    Vibrator vibrator;
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -41,8 +45,12 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
 
         final SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
 
@@ -59,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
             public void onAnimationStart(Animation animation) {
                 Img.setVisibility(View.VISIBLE);
                 ClickHere.setVisibility(View.GONE);
+
             }
 
             @Override
@@ -85,8 +94,10 @@ public class MainActivity extends AppCompatActivity {
                                        } else {
                                            Boolean vib_switch = settings.getBoolean("switch_vib",true);
                                            if(vib_switch){
+                                                vibrator.vibrate(1000);
+                                           }
                                            Img.setImageResource(R.drawable.punch);
-                                           Img.startAnimation(fadeOut);}
+                                           Img.startAnimation(fadeOut);
                                        }
                                    }
                                }
