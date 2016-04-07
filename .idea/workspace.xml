@@ -17,41 +17,36 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d35f71c-0f6d-4c1b-95c2-adf03a16a896" name="Default" comment="">
-      <change type="DELETED" beforePath="F:\Ganesh\AndroidDev\Git-Reps\Punch\app\src\main\res\drawable\Happy\4Head.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Ganesh\AndroidDev\Git-Reps\Punch\app\src\main\res\drawable\Happy\DendiFace.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Ganesh\AndroidDev\Git-Reps\Punch\app\src\main\res\drawable\Happy\EleGiggle.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Ganesh\AndroidDev\Git-Reps\Punch\app\src\main\res\drawable\Happy\Kappa.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Ganesh\AndroidDev\Git-Reps\Punch\app\src\main\res\drawable\Happy\KappaPride.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Ganesh\AndroidDev\Git-Reps\Punch\app\src\main\res\drawable\Happy\MingLee.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Ganesh\AndroidDev\Git-Reps\Punch\app\src\main\res\drawable\Happy\OSFrog.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Ganesh\AndroidDev\Git-Reps\Punch\app\src\main\res\drawable\Happy\OpieOP.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Ganesh\AndroidDev\Git-Reps\Punch\app\src\main\res\drawable\Happy\PogChamp.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Ganesh\AndroidDev\Git-Reps\Punch\app\src\main\res\drawable\Happy\PuppeyFace.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Ganesh\AndroidDev\Git-Reps\Punch\app\src\main\res\drawable\Happy\SeemsGood.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Ganesh\AndroidDev\Git-Reps\Punch\app\src\main\res\drawable\Happy\SoBayed.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Ganesh\AndroidDev\Git-Reps\Punch\app\src\main\res\drawable\Happy\TriHard.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Ganesh\AndroidDev\Git-Reps\Punch\app\src\main\res\drawable\Happy\envyWeWon.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Ganesh\AndroidDev\Git-Reps\Punch\app\src\main\res\drawable\Happy\rtzW.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Ganesh\AndroidDev\Git-Reps\Punch\app\src\main\res\drawable\Happy\singsingTub.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Ganesh\AndroidDev\Git-Reps\Punch\app\src\main\res\drawable\Sad\BabyRage.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Ganesh\AndroidDev\Git-Reps\Punch\app\src\main\res\drawable\Sad\BibleThump.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Ganesh\AndroidDev\Git-Reps\Punch\app\src\main\res\drawable\Sad\BrokeBack.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Ganesh\AndroidDev\Git-Reps\Punch\app\src\main\res\drawable\Sad\DansGame.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Ganesh\AndroidDev\Git-Reps\Punch\app\src\main\res\drawable\Sad\FailFish.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Ganesh\AndroidDev\Git-Reps\Punch\app\src\main\res\drawable\Sad\FeelsBadMan.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Ganesh\AndroidDev\Git-Reps\Punch\app\src\main\res\drawable\Sad\PJSalt.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Ganesh\AndroidDev\Git-Reps\Punch\app\src\main\res\drawable\Sad\ResidentSleeper.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Ganesh\AndroidDev\Git-Reps\Punch\app\src\main\res\drawable\Sad\RuleFive.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Ganesh\AndroidDev\Git-Reps\Punch\app\src\main\res\drawable\Sad\SwiftRage.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Ganesh\AndroidDev\Git-Reps\Punch\app\src\main\res\drawable\Sad\WutFace.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Ganesh\AndroidDev\Git-Reps\Punch\app\src\main\res\drawable\Sad\admiralW.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Ganesh\AndroidDev\Git-Reps\Punch\app\src\main\res\drawable\Sad\envyWeLost.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/outputFileStates.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/taskArtifacts.bin" />
+    <list default="true" id="1d35f71c-0f6d-4c1b-95c2-adf03a16a896" name="Default" comment="Drawable subfolder removal and twitch emoticons renamed">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/happy_4head.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/happy_dendiface.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/happy_elegiggle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/happy_envywewon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/happy_kappa.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/happy_kappapride.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/happy_minglee.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/happy_opieop.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/happy_osfrog.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/happy_pogchamp.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/happy_puppeyface.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/happy_rtzw.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/happy_seemsgood.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/happy_singsingtub.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/happy_sobayed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/happy_trihard.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/sad_admiralw.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/sad_babyrage.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/sad_biblethump.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/sad_brokeback.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/sad_dansgame.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/sad_envywelost.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/sad_failfish.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/sad_feelsbadman.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/sad_pjsalt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/sad_residentsleeper.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/sad_rulefive.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/sad_swiftrage.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/sad_wutface.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Punch.iws" />
@@ -96,7 +91,7 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ecksday/punch/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.6810036">
+            <state vertical-scroll-proportion="4.08">
               <caret line="104" column="71" selection-start-line="104" selection-start-column="71" selection-end-line="104" selection-end-column="71" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -1931,7 +1926,7 @@
   <component name="PropertiesComponent">
     <property name="android.project.structure.last.selected" value="SDK Location" />
     <property name="android.project.structure.proportion" value="0.15" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Confirmation" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
     <property name="OverrideImplement.combined" value="true" />
@@ -2158,7 +2153,13 @@
       <option name="project" value="LOCAL" />
       <updated>1460056634663</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Drawable subfolder removal and twitch emoticons renamed">
+      <created>1460056848304</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1460056848304</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2174,14 +2175,14 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329582" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988507" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32988507" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988507" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18703108" sideWeight="0.4954023" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18703108" sideWeight="0.4954023" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973205" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329582" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -2248,7 +2249,8 @@
     <MESSAGE value="Vibration implementation" />
     <MESSAGE value="GameOver Dialog box and winner declaration implementation" />
     <MESSAGE value="Player turns overhaul and twitch emoticons" />
-    <option name="LAST_COMMIT_MESSAGE" value="Player turns overhaul and twitch emoticons" />
+    <MESSAGE value="Drawable subfolder removal and twitch emoticons renamed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Drawable subfolder removal and twitch emoticons renamed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2715,7 +2717,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ecksday/punch/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.6810036">
+        <state vertical-scroll-proportion="4.08">
           <caret line="104" column="71" selection-start-line="104" selection-start-column="71" selection-end-line="104" selection-end-column="71" />
           <folding>
             <element signature="imports" expanded="true" />
