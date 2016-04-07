@@ -9,22 +9,22 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.ecksday.punch.MainActivity">
 
-
-    <Button
+    <ImageButton
+        android:id="@+id/imageButton"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/ClickHere"
-        android:id="@+id/button"
-        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:layout_alignEnd="@+id/textView"
         android:layout_alignParentTop="true" />
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/imageView1"
-        android:layout_alignBottom="@+id/button"
-        android:layout_alignEnd="@+id/button"
-        android:src="@drawable/thumbsup"
-        android:visibility="gone" />
-
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ClickHere"
+        android:id="@+id/textView"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:textAlignment="center"
+        android:textSize="30sp" />
 </RelativeLayout>
