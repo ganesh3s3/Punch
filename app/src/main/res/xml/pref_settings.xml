@@ -3,11 +3,21 @@
 
     <PreferenceCategory
         android:title="Hardware Settings">
-    <SwitchPreference
-        android:key="switch_vib"
-        android:title="Vibrate on punch?"
-        android:defaultValue="true">
-    </SwitchPreference>
+        <SwitchPreference
+            android:key="switch_vib"
+            android:title="Vibrate on punch?"
+            android:defaultValue="true">
+        </SwitchPreference>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Scoring">
+        <Preference
+            android:key="reset_button"
+            android:title="Reset Scores"
+            android:summary="Click to reset all player scores"
+            android:widgetLayout="@layout/pref_reset_button"
+            ></Preference>
     </PreferenceCategory>
 
 </PreferenceScreen>
