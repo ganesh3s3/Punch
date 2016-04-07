@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Vibrator;
+import android.preference.Preference;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,12 +13,15 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import java.security.SecureRandom;
 
 public class MainActivity extends AppCompatActivity {
+
     Vibrator vibrator;
+    public static int p1score=0,p2score=0,p1hs,p2hs,roundno=1,p1streak=0,p2streak=0;
 
 
     @Override
@@ -28,13 +32,10 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+
             Intent intent = new Intent(MainActivity.this,Settings_Activity.class);
             startActivity(intent);
             return true;
@@ -51,16 +52,23 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-
         final SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
+
+        final Button P1Button = (Button) findViewById(R.id.button);
+        final Button P2Button = (Button) findViewById(R.id.button2);
+        final Button RoundButton = (Button) findViewById(R.id.button3);
 
         final ImageButton Img = (ImageButton) findViewById(R.id.imageButton);
         final TextView ClickHere = (TextView) findViewById(R.id.textView);
+        P1Button.setText("Player 1: "+p1score);
+        P2Button.setText("Player 2: " + p2score);
+        RoundButton.setText("Round: " + roundno);
 
         final Animation fadeOut = new AlphaAnimation(1,0);
         fadeOut.setStartOffset(1000);
         fadeOut.setDuration(1000);
         Img.setAnimation(fadeOut);
+
 
         fadeOut.setAnimationListener(new Animation.AnimationListener() {
             @Override
@@ -83,21 +91,46 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+
         Img.setOnClickListener(new View.OnClickListener() {
                                    @Override
                                    public void onClick(View v) {
                                        SecureRandom r = new SecureRandom();
                                        int i = r.nextInt(2);
                                        if (i == 0) {
+                                           if(roundno%2==1) {
+                                               p1streak++;
+                                               p1score+=p1streak;
+                                               P1Button.setText("Player 1: "+p1score);
+                                           }
+                                           else {
+                                               p2streak++;
+                                               p2score+=p2streak;
+                                               P2Button.setText("Player 2: "+p2score);
+                                           }
                                            Img.setImageResource(R.drawable.thumbsup);
                                            Img.startAnimation(fadeOut);
+                                           roundno++;
+                                           RoundButton.setText("Round: "+roundno);
                                        } else {
+                                           if(roundno%2==1) {
+                                               p1score--;
+                                               p1streak=0;
+                                               P1Button.setText("Player 1: "+p1score);
+                                           }
+                                           else {
+                                               p2streak=0;
+                                               p2score--;
+                                               P2Button.setText("Player 2: "+p2score);
+                                           }
                                            Boolean vib_switch = settings.getBoolean("switch_vib",true);
                                            if(vib_switch){
-                                                vibrator.vibrate(1000);
+                                               vibrator.vibrate(1000);
                                            }
                                            Img.setImageResource(R.drawable.punch);
                                            Img.startAnimation(fadeOut);
+                                           roundno++;
+                                           RoundButton.setText("Round: "+roundno);
                                        }
                                    }
                                }
