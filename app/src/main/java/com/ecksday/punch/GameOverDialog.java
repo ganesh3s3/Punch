@@ -20,19 +20,37 @@ public class GameOverDialog extends DialogFragment
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState)
     {
-        return new AlertDialog.Builder(getActivity())
-                .setTitle("Game Over!")
-                .setMessage("Player " + MainActivity.winner +" wins the game!")
-                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface arg0, int arg1) {
+        if(MainActivity.winner!=0) {
+            return new AlertDialog.Builder(getActivity())
+                    .setTitle("Game Over!")
+                    .setMessage("Player " + MainActivity.winner + " wins the game!")
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface arg0, int arg1) {
                             com.ecksday.punch.MainActivity.roundno = 1;
                             com.ecksday.punch.MainActivity.p1score = 0;
                             com.ecksday.punch.MainActivity.p2score = 0;
                             com.ecksday.punch.MainActivity.p1streak = 0;
                             com.ecksday.punch.MainActivity.p2streak = 0;
-                    }
-                })
-                .create();
+                        }
+                    })
+                    .create();
+        }
+        else {
+            return new AlertDialog.Builder(getActivity())
+                    .setTitle("Game Over!")
+                    .setMessage("It's a Tie!")
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface arg0, int arg1) {
+                            com.ecksday.punch.MainActivity.roundno = 1;
+                            com.ecksday.punch.MainActivity.p1score = 0;
+                            com.ecksday.punch.MainActivity.p2score = 0;
+                            com.ecksday.punch.MainActivity.p1streak = 0;
+                            com.ecksday.punch.MainActivity.p2streak = 0;
+                        }
+                    })
+                    .create();
+        }
     }
 }

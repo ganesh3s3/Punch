@@ -57,6 +57,9 @@ public class MainActivity extends AppCompatActivity {
         final Button P1Button = (Button) findViewById(R.id.button);
         final Button P2Button = (Button) findViewById(R.id.button2);
         final Button RoundButton = (Button) findViewById(R.id.button3);
+        final int randhimg[]={R.drawable.happy_4head,R.drawable.happy_dendiface,R.drawable.happy_elegiggle,R.drawable.happy_envywewon,R.drawable.happy_kappa,R.drawable.happy_kappapride,R.drawable.happy_minglee,R.drawable.happy_opieop,R.drawable.happy_osfrog,R.drawable.happy_pogchamp,R.drawable.happy_puppeyface,R.drawable.happy_rtzw,R.drawable.happy_seemsgood,R.drawable.happy_singsingtub,R.drawable.happy_trihard,R.drawable.happy_sobayed};
+        final int randsimg[]={R.drawable.sad_admiralw,R.drawable.sad_babyrage,R.drawable.sad_biblethump,R.drawable.sad_brokeback,R.drawable.sad_dansgame,R.drawable.sad_envywelost,R.drawable.sad_failfish,R.drawable.sad_feelsbadman,R.drawable.sad_pjsalt,R.drawable.sad_residentsleeper,R.drawable.sad_rulefive,R.drawable.sad_swiftrage,R.drawable.sad_wutface};
+
 
         final ImageButton Img = (ImageButton) findViewById(R.id.imageButton);
         final TextView ClickHere = (TextView) findViewById(R.id.textView);
@@ -98,24 +101,27 @@ public class MainActivity extends AppCompatActivity {
                                    public void onClick(View v) {
                                        if (roundno < 10) {
                                            SecureRandom r = new SecureRandom();
-                                           int i = r.nextInt(2);
+                                           int i = r.nextInt(3);
                                            if (playerturn == 1) {
                                                if (i>0) {
                                                    p1streak++;
-                                                   p2streak = 0;
-                                                   p1score += p1streak;
+                                                   if(p1score<=0)
+                                                        p1score=1;
+                                                   else
+                                                        p1score *= p1streak;
                                                    RoundButton.setText(getResources().getString(R.string.roundno) + roundno);
-                                                   int[] randimg={R.drawable.happy_4head,R.drawable.happy_dendiface,R.drawable.happy_elegiggle,R.drawable.happy_envywewon,R.drawable.happy_kappa,R.drawable.happy_kappapride,R.drawable.happy_minglee,R.drawable.happy_opieop,R.drawable.happy_osfrog,R.drawable.happy_pogchamp,R.drawable.happy_puppeyface,R.drawable.happy_rtzw,R.drawable.happy_seemsgood,R.drawable.happy_singsingtub,R.drawable.happy_trihard,R.drawable.happy_sobayed};
                                                    SecureRandom sr = new SecureRandom();
                                                    int n=sr.nextInt(16);
-                                                   Img.setImageResource(randimg[n]);
+                                                   Img.setImageResource(randhimg[n]);
                                                    Img.setBackgroundColor(Color.GREEN);
                                                    Img.getBackground().setAlpha(51);
                                                    Img.startAnimation(fadeOut);
+
                                                }
                                                else {
                                                    p1streak = 0;
-                                                   p1score--;
+                                                   if (p1score>0)
+                                                   {p1score= (p1score*2)/3;}
                                                    playerturn = 2;
                                                    roundno++;
                                                    RoundButton.setText(getResources().getString(R.string.roundno) + roundno);
@@ -123,10 +129,9 @@ public class MainActivity extends AppCompatActivity {
                                                    if (vib_switch) {
                                                        vibrator.vibrate(1000);
                                                    }
-                                                   int[] randimg={R.drawable.sad_admiralw,R.drawable.sad_babyrage,R.drawable.sad_biblethump,R.drawable.sad_brokeback,R.drawable.sad_dansgame,R.drawable.sad_envywelost,R.drawable.sad_failfish,R.drawable.sad_feelsbadman,R.drawable.sad_pjsalt,R.drawable.sad_residentsleeper,R.drawable.sad_rulefive,R.drawable.sad_swiftrage,R.drawable.sad_wutface};
                                                    SecureRandom sr = new SecureRandom();
                                                    int n=sr.nextInt(13);
-                                                   Img.setImageResource(randimg[n]);
+                                                   Img.setImageResource(randsimg[n]);
                                                    Img.setBackgroundColor(Color.RED);
                                                    Img.getBackground().setAlpha(51);
                                                    Img.startAnimation(fadeOut);
@@ -136,20 +141,22 @@ public class MainActivity extends AppCompatActivity {
                                            else if (playerturn == 2) {
                                                if (i>0) {
                                                    p2streak++;
-                                                   p1streak = 0;
-                                                   p2score += p2streak;
+                                                   if(p2score<=0)
+                                                       p2score=1;
+                                                   else
+                                                       p2score *= p2streak;
                                                    RoundButton.setText(getResources().getString(R.string.roundno) + roundno);
-                                                   int[] randimg={R.drawable.happy_4head,R.drawable.happy_dendiface,R.drawable.happy_elegiggle,R.drawable.happy_envywewon,R.drawable.happy_kappa,R.drawable.happy_kappapride,R.drawable.happy_minglee,R.drawable.happy_opieop,R.drawable.happy_osfrog,R.drawable.happy_pogchamp,R.drawable.happy_puppeyface,R.drawable.happy_rtzw,R.drawable.happy_seemsgood,R.drawable.happy_singsingtub,R.drawable.happy_trihard,R.drawable.happy_sobayed};
                                                    SecureRandom sr = new SecureRandom();
                                                    int n=sr.nextInt(16);
-                                                   Img.setImageResource(randimg[n]);
+                                                   Img.setImageResource(randhimg[n]);
                                                    Img.setBackgroundColor(Color.GREEN);
                                                    Img.getBackground().setAlpha(51);
                                                    Img.startAnimation(fadeOut);
                                                }
                                                else {
                                                    p2streak = 0;
-                                                   p2score--;
+                                                   if (p2score>0)
+                                                   {p2score=(p2score*2)/3;}
                                                    playerturn = 1;
                                                    roundno++;
                                                    RoundButton.setText(getResources().getString(R.string.roundno) + roundno);
@@ -157,10 +164,9 @@ public class MainActivity extends AppCompatActivity {
                                                    if (vib_switch) {
                                                        vibrator.vibrate(1000);
                                                    }
-                                                   int[] randimg={R.drawable.sad_admiralw,R.drawable.sad_babyrage,R.drawable.sad_biblethump,R.drawable.sad_brokeback,R.drawable.sad_dansgame,R.drawable.sad_envywelost,R.drawable.sad_failfish,R.drawable.sad_feelsbadman,R.drawable.sad_pjsalt,R.drawable.sad_residentsleeper,R.drawable.sad_rulefive,R.drawable.sad_swiftrage,R.drawable.sad_wutface};
                                                    SecureRandom sr = new SecureRandom();
                                                    int n=sr.nextInt(13);
-                                                   Img.setImageResource(randimg[n]);
+                                                   Img.setImageResource(randsimg[n]);
                                                    Img.setBackgroundColor(Color.RED);
                                                    Img.getBackground().setAlpha(51);
                                                    Img.startAnimation(fadeOut);
